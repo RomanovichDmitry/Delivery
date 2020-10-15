@@ -477,7 +477,8 @@ li {
     font-family: 'Gilroy Extra Bold';
     border-bottom: 5px solid #e83c32;
     font-size: 40px;
-    scroll-margin: 100px; }
+    scroll-margin: 100px;
+    -webkit-overflow-scrolling: touch; }
   .catalog__list {
     display: flex;
     flex-wrap: wrap; }
