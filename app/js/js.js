@@ -6,12 +6,21 @@ let menuBtn = document.querySelector('.menu__button');
 let btnSize = document.querySelectorAll('.catalog__item-btn');
 let items = document.querySelectorAll('.catalog__item');
 let cartCont = document.getElementById('crate__content');
+let menuLink = document.querySelectorAll('.menu__link')
 
 //Кнопка меню
 
 menuBtn.onclick = () => {
     menuBtn.classList.toggle('menu__button--active');
 }
+if (document.documentElement.clientWidth < 768) {
+    for(let link of menuLink){
+        link.addEventListener('click', function(){
+            menuBtn.classList.remove('menu__button--active');
+        })
+    }
+}
+
 // Фиксация меню при скроле
 let fixHeaderRow = () => {
     if(window.scrollY > 20){
@@ -59,4 +68,18 @@ function clickOnCard(evt) {
     }
 }
 
-//Корзина 
+//Плавный скрол
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href').substr(1)
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
