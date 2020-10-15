@@ -1,0 +1,86 @@
+.map {
+    position: relative;
+    background-image: url(../images/map.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+    min-height: 520px;
+
+    .form-block {
+        position: absolute;
+        right: 50px;
+        top: 30px;
+        width: 600px;
+        padding: 15px 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 #000;
+        color: #e83c32;
+
+        &__contacts {
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+        
+        &__title {
+            font-family: 'Gilroy Extra Bold';
+            margin-bottom: 15px;
+        }
+
+        .bold {
+            font-family: 'Gilroy Extra Bold';
+        }
+
+        form {
+            input {
+                margin-bottom: 15px;
+                width: 100%;
+                padding: 10px 30px;
+                border-radius: 5px;
+                border: none;
+                background-color: #f1f3f4;
+            }
+            textarea {
+                width: 100%;
+                padding: 10px 30px;
+                border-radius: 5px;
+                border: none;
+                background-color: #f1f3f4;
+                resize: none;
+                margin-bottom: 15px;
+            }
+
+            button {
+                display: block;
+                padding: 5px 60px;
+                border-radius: 5px;
+                border: none;
+                font-family: 'Gilroy Extra Bold';
+                color: #fff;
+                background-color: #e83c32;
+                margin: auto;
+            }
+            
+        }
+    }
+}
+
+@media (max-width:$desktop) {
+    .map {
+        background-image: none;
+        
+        .form-block {
+            position: static;
+            margin: auto;
+        }
+    }
+}
+
+@media (max-width:$tablet) {
+.map {
+
+    .form-block {
+        width: 100%;
+    }
+}
+}

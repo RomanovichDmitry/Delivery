@@ -1,0 +1,43 @@
+.header {
+  background-image: url(../images/bg.jpg);
+  background-position: 0 0;
+  background-size: 100% 100%;
+  padding-top: 20px;
+  min-height: 600px; }
+  .header__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px; }
+    .header__row svg {
+      vertical-align: top; }
+  .header a {
+    color: #fff; }
+
+.menu__list {
+  display: flex;
+  justify-content: space-between; }
+
+.menu__item {
+  margin-right: 25px; }
+
+.menu__item:last-child {
+  margin-right: 0; }
+
+.baner-text {
+  text-align: center;
+  color: #fff; }
+  .baner-text__title {
+    font-size: 80px;
+    font-family: 'Gilroy Extra Bold';
+    margin-bottom: 45px;
+    text-transform: uppercase; }
+  .baner-text__description {
+    font-size: 24px; }
+
+.fixed-header {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  left: 0;
+  z-index: 999; }

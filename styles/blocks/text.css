@@ -1,0 +1,25 @@
+.text {
+  background-image: url(../images/blurBg.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+  font-family: 'Gilroy Extra Bold';
+  margin-bottom: 30px; }
+  .text h2 {
+    font-size: 40px;
+    margin-bottom: 20px; }
+  .text h3 {
+    font-size: 28px;
+    margin-bottom: 20px; }
+  .text h4 {
+    font-size: 26px;
+    margin-bottom: 20px; }
+  .text h5 {
+    font-size: 22px;
+    margin-bottom: 20px; }
+  .text p {
+    margin-bottom: 15px;
+    font-size: 18px; }

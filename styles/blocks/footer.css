@@ -1,0 +1,21 @@
+.main-footer {
+  padding: 30px 0px;
+  background-color: #000502; }
+  .main-footer a {
+    color: #fff; }
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .footer__row .footer__contacts-description {
+    font-size: 12px;
+    text-align: center;
+    color: #fff; }
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  .footer__contacts a {
+    margin-bottom: 10px; }

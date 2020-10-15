@@ -1,0 +1,105 @@
+.stages {
+    text-align: center;
+    padding-bottom: 50px;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        
+        width: 260px;
+        margin-right: 33.3px;
+
+    }
+    &__item:last-child {
+        margin-right: 0;
+    }
+    &__item::before {
+        position: absolute;
+        content: '';
+        width: 150px;
+        height: 108px;
+        left: 50px;
+        top: -115px;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+    }
+
+    &__item:nth-child(1)::before{
+        background-image: url(../images/1.png); 
+    }
+    &__item:nth-child(2)::before{
+        background-image: url(../images/2.png); 
+    }
+    &__item:nth-child(3)::before{
+        background-image: url(../images/3.png); 
+    }
+    &__item:nth-child(4)::before{
+        background-image: url(../images/4.png); 
+    }
+
+    &__title {
+        margin-bottom: 150px;
+        font-family: 'Gilroy Extra Bold';
+        font-size: 26px;
+        @media (max-width:$desktop) {
+            font-size: 24px;
+        }
+    }
+
+    &__name {
+        font-size: 24px;
+        font-family: 'Gilroy Extra Bold';
+        margin-bottom: 15px;
+        @media (max-width:$desktop) {
+            font-size: 22px;
+        }
+    }
+
+    &__description {
+        font-size: 18px;
+        @media (max-width:$desktop) {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width:$desktop) {
+    .stages {
+
+        &__item::before {
+            left: 5px;
+        }
+    }
+}
+@media (max-width:$tablet) {
+    .stages {
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+        }
+        &__item {
+            width: 45%;
+            margin-right: 0;
+            margin-bottom: 130px;
+
+            &::before {
+                left: -15px;
+            }
+
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-bottom: 0;
+            }
+        }
+
+        &__name {
+            font-size: 19px;
+        }
+    }
+}

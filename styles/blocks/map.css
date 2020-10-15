@@ -1,0 +1,49 @@
+.map {
+  position: relative;
+  background-image: url(../images/map.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+  min-height: 520px; }
+  .map .form-block {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    width: 600px;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    color: #e83c32; }
+    .map .form-block__contacts {
+      font-size: 16px;
+      margin-bottom: 25px; }
+    .map .form-block__title {
+      font-family: 'Gilroy Extra Bold';
+      margin-bottom: 15px; }
+    .map .form-block .bold {
+      font-family: 'Gilroy Extra Bold'; }
+    .map .form-block form input {
+      margin-bottom: 15px;
+      width: 100%;
+      padding: 10px 30px;
+      border-radius: 5px;
+      border: none;
+      background-color: #f1f3f4; }
+    .map .form-block form textarea {
+      width: 100%;
+      padding: 10px 30px;
+      border-radius: 5px;
+      border: none;
+      background-color: #f1f3f4;
+      resize: none;
+      margin-bottom: 15px; }
+    .map .form-block form button {
+      display: block;
+      padding: 5px 60px;
+      border-radius: 5px;
+      border: none;
+      font-family: 'Gilroy Extra Bold';
+      color: #fff;
+      background-color: #e83c32;
+      margin: auto; }

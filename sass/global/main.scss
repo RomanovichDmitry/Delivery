@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Gilroy Light';
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+a { 
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+.container {
+    @include container
+}

@@ -1,0 +1,38 @@
+.stages {
+  text-align: center;
+  padding-bottom: 50px; }
+  .stages__list {
+    display: flex; }
+  .stages__item {
+    position: relative;
+    width: 260px;
+    margin-right: 33.3px; }
+  .stages__item:last-child {
+    margin-right: 0; }
+  .stages__item::before {
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 108px;
+    left: 50px;
+    top: -115px;
+    background-repeat: no-repeat;
+    background-position: 50% 0; }
+  .stages__item:nth-child(1)::before {
+    background-image: url(../images/1.png); }
+  .stages__item:nth-child(2)::before {
+    background-image: url(../images/2.png); }
+  .stages__item:nth-child(3)::before {
+    background-image: url(../images/3.png); }
+  .stages__item:nth-child(4)::before {
+    background-image: url(../images/4.png); }
+  .stages__title {
+    margin-bottom: 150px;
+    font-family: 'Gilroy Extra Bold';
+    font-size: 26px; }
+  .stages__name {
+    font-size: 24px;
+    font-family: 'Gilroy Extra Bold';
+    margin-bottom: 15px; }
+  .stages__description {
+    font-size: 18px; }
