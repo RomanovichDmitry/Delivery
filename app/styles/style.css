@@ -752,11 +752,3 @@ li {
     font-size: 14px; }
   .footer__contacts-description {
     font-size: 10px; } }
-
-#crate__content {
-  position: fixed;
-  right: 0;
-  background-color: #ffffff;
-  width: 300px;
-  height: 100px;
-  top: 50%; }
