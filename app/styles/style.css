@@ -404,7 +404,7 @@ li {
     .header__logo-image {
       width: 90px; }
   .menu__item {
-    margin-right: 20px; } }
+    margin-right: 15px; } }
 
 @media (max-width: 768px) {
   .header__logo-image {
