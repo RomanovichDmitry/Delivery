@@ -1,0 +1,2 @@
+sales@some_site.com|Отдел заказов
+admin@some_site.com|Администратор
