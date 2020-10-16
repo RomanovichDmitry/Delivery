@@ -716,6 +716,9 @@ li {
       color: #fff;
       background-color: #e83c32;
       margin: auto; }
+    .map .form-block form .submit-btn--submit {
+      background-color: #0ea300;
+      transition: .3s; }
 
 @media (max-width: 1300px) {
   .map {
