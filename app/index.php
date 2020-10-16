@@ -564,9 +564,9 @@
                     <span class="bold">E-mail:</span> pizza@finger-food.ru
                 </p>
                 <form action="/mail.php" method="POST" id="form-footer">
-                    <input type="text" name="name" placeholder="Имя" require> <br>
-                    <input type="email" name="email" placeholder="E-mail" require> <br>
-                    <input type="tel" name="phone" placeholder="Телефон" require><br>
+                    <input type="text" name="name" placeholder="Имя" required> <br>
+                    <input type="email" name="email" placeholder="E-mail"  required> <br>
+                    <input type="tel" name="phone" placeholder="Телефон"  required><br>
                     <textarea name="message" cols="30" rows="3" placeholder="Ваше сообщение" ></textarea><br>
                     <button type="submit" name="submit-form" class="submit-btn">Отправить</button>
                 </form>

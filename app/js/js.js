@@ -104,13 +104,10 @@ formFooter.addEventListener('submit', (evt) => {
 
     submitBtn.classList.add('submit-btn--submit');
     submitBtn.textContent = "Отправлено"
+    submitBtn.setAttribute('disabled', 'disabled');
 
     request.open('POST', '/mail.php', true);
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
     request.send('name=' + encodeURIComponent(formData.name) + '&email=' + encodeURIComponent(formData.email) + '&phone=' + encodeURIComponent(formData.phone) + '&message=' + encodeURIComponent(formData.message));
 
-    document.querySelector('input[name="name"]').reset();
-    document.querySelector('input[name="email"]').reset();
-    document.querySelector('input[name="phone"]').reset();
-    document.querySelector('textarea[name="message"]').reset();
 });

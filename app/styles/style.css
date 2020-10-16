@@ -709,7 +709,8 @@ li {
       margin-bottom: 15px; }
     .map .form-block form button {
       display: block;
-      padding: 5px 60px;
+      padding: 5px 0;
+      width: 50%;
       border-radius: 5px;
       border: none;
       font-family: 'Gilroy Extra Bold';
@@ -717,8 +718,8 @@ li {
       background-color: #e83c32;
       margin: auto; }
     .map .form-block form .submit-btn--submit {
-      background-color: #0ea300;
-      transition: .3s; }
+      background-color: #7c7c7c;
+      transition: .5s; }
 
 @media (max-width: 1300px) {
   .map {

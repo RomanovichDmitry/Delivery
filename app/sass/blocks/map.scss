@@ -52,7 +52,8 @@
 
             button {
                 display: block;
-                padding: 5px 60px;
+                padding: 5px 0; 
+                width: 50%;
                 border-radius: 5px;
                 border: none;
                 font-family: 'Gilroy Extra Bold';
@@ -62,8 +63,8 @@
             }
 
             .submit-btn--submit {
-                background-color: rgb(14, 163, 0);
-                transition: .3s;
+                background-color: rgb(124, 124, 124);
+                transition: .5s;
             }
             
         }
