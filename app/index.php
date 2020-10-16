@@ -563,9 +563,9 @@
                     <span class="bold">Адрес:</span> Ленинградская область, Гатчинский район, Киевское шоссе 2Г <br>
                     <span class="bold">E-mail:</span> pizza@finger-food.ru
                 </p>
-                <form action="form.php" method="get">
-                    <input type="text" name="name" id="" placeholder="Имя"> <br>
-                    <input type="email" name="e-mail" id="" placeholder="E-mail"> <br>
+                <form action="mail.php" method="POST">
+                    <input type="text" name="first-name" id="" placeholder="Имя"> <br>
+                    <input type="email" name="email" id="" placeholder="E-mail"> <br>
                     <input type="tel" name="phone" id="" placeholder="Телефон"><br>
                     <textarea name="message" id="" cols="30" rows="3" placeholder="Ваше сообщение" ></textarea><br>
                     <button type="submit" name="submit-form">Отправить</button>
