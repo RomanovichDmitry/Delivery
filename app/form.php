@@ -1,5 +1,6 @@
-<?php 
-if(isset($_POST['submit-form'])){
+<?php
+
+if(isset($_POST['submit'])){
     $to = "lineagecrem@mail.ru";
     $name = $_POST['name'];
     $email = $_POST['e-mail'];
@@ -7,5 +8,7 @@ if(isset($_POST['submit-form'])){
     $message = $_POST['message'];
 
     mail($to, $name, $email, $phone, $message )
+
 }
+
 ?>
