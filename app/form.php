@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
     $phone = $_POST['phone'];
     $message = $_POST['message'];
 
-    mail($to, $name, $email, $phone, $message )
+    mail($to, $name, $email, $phone, $message);
 
 }
 
