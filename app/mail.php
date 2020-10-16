@@ -1,27 +1,53 @@
+
 <?php
-        $name = trim($_POST['first-name']);
-        $email = trim($_POST['email']);
-        $phone = trim($_POST['phone']);
-        $message = trim($_POST['message']);
+$result = [];
 
-        // указываем адрес отправителя, можно указать адрес на домене Вашего сайта
-        $fromMail = 'info@romanovichdmitry.ru';
-        $fromName = 'Форма в футере Форма';
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-        // Сюда введите Ваш email
-        $emailTo = 'lineagecrem@mail.ru';
-        $subject = 'Форма обратной связи на php';
-        $subject = '=?utf-8?b?'. base64_encode($subject) .'?=';
-        $headers = "Content-type: text/plain; charset=\"utf-8\"\r\n";
-        $headers .= "From: ". $fromName ." <". $fromMail ."> \r\n";
+  $name   = isset($_POST['name']) ? test_input($_POST['name']) : '';
+  $phone  = isset($_POST['phone']) ? test_input($_POST['phone']) : '';
+  $email = isset($_POST['email']) ? test_input($_POST['email']) : '';
+  $message = isset($_POST['message']) ? test_input($_POST['email']) : '';
 
-        // тело письма
-        $body = "Получено письмо с сайта testsite.ru \n Имя: $name\nТелефон: $phone \n E-mail: $email\nСообщение: $message";
+  if ($name && $phone) {
+    $to  = "lineagecrem@mail.ru";
+    $subject = "Заявка на обратный звонок";
+    $message = "<p>Пользователь с именем <storng>$name</storng> <br> и телефоном <strong>$phone</strong> <br> попросил перезвонить.</p>";
 
-        // сообщение будет отправлено в случае, если поле с номером телефона не пустое
-        if (strlen($phone) > 0) {
-            $mail = mail($emailTo, $subject, $body, $headers, '-f'. $fromMail );
-            echo ("ПИСЬМО ОТПРАВЛЕНО!!");
-        }
+    $headers  = "Content-type: text/html; charset=utf-8 \r\n";
+    $headers .= "From: <mail@romanovichdmitriy.ru/>\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion() ."\r\n";
+    //$headers .= "Reply-To: reply-to@example.com\r\n";
 
-        ?>
+    $mail_status = mail($to, $subject, $message, $headers);
+
+    $result['success'] = true;
+    $result['message'] = 'Ваша заявка успешно обработана!';
+    $result['mailStatus'] = $mail_status;
+
+  } else {
+    $result['success'] = false;
+    $result['message'] = 'Одно или несколько полей заполнено неправильно!';
+  }
+
+  response($result);
+
+} else {
+  $result['success'] = false;
+  $result['message'] = 'Не корректный метод отправки формы';
+
+  response($result);
+}
+
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+function response($result) {
+  echo json_encode($result);
+  exit();
+}
