@@ -6,7 +6,9 @@ let menuBtn = document.querySelector('.menu__button');
 let btnSize = document.querySelectorAll('.catalog__item-btn');
 let items = document.querySelectorAll('.catalog__item');
 let cartCont = document.getElementById('crate__content');
-let menuLink = document.querySelectorAll('.menu__link')
+let menuLink = document.querySelectorAll('.menu__link');
+let formFooter = document.getElementById('form-footer');
+let submitBtn = document.querySelector('.submit-btn');
 
 //Кнопка меню
 
@@ -83,3 +85,32 @@ for (let anchor of anchors) {
     })
   })
 }
+
+//Отправка формы в футере 
+
+formFooter.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+
+    let formData = {
+
+        name: document.querySelector('input[name="name"]').value,
+        email: document.querySelector('input[name="email"]').value,
+        phone: document.querySelector('input[name="phone"]').value,
+        message: document.querySelector('textarea[name="message"]').value
+
+    };
+    let request = new XMLHttpRequest();
+
+
+    submitBtn.classList.add('submit-btn--submit');
+    submitBtn.textContent = "Отправлено"
+
+    request.open('POST', '/mail.php', true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.send('name=' + encodeURIComponent(formData.name) + '&email=' + encodeURIComponent(formData.email) + '&phone=' + encodeURIComponent(formData.phone) + '&message=' + encodeURIComponent(formData.message));
+
+    document.querySelector('input[name="name"]').reset();
+    document.querySelector('input[name="email"]').reset();
+    document.querySelector('input[name="phone"]').reset();
+    document.querySelector('textarea[name="message"]').reset();
+});
