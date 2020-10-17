@@ -89,9 +89,9 @@ for (let anchor of anchors) {
 //Отправка формы в футере 
 
 formFooter.addEventListener('submit', (evt) => {
-    evt.preventDefault();
+    evt.preventDefault(); //Сбросить по умолчанию
 
-    let formData = {
+    let formData = { //Объект элементов формы
 
         name: document.querySelector('input[name="name"]').value,
         email: document.querySelector('input[name="email"]').value,
@@ -99,7 +99,7 @@ formFooter.addEventListener('submit', (evt) => {
         message: document.querySelector('textarea[name="message"]').value
 
     };
-    let request = new XMLHttpRequest();
+    let request = new XMLHttpRequest(); // Не знаю что это
 
 
     submitBtn.classList.add('submit-btn--submit');
@@ -110,6 +110,6 @@ formFooter.addEventListener('submit', (evt) => {
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
     request.send('name=' + encodeURIComponent(formData.name) + '&email=' + encodeURIComponent(formData.email) + '&phone=' + encodeURIComponent(formData.phone) + '&message=' + encodeURIComponent(formData.message));
 
-    formFooter.reset();
+    formFooter.reset(); // Сброс формы
 
 });

@@ -718,8 +718,32 @@ li {
       background-color: #e83c32;
       margin: auto; }
     .map .form-block form .submit-btn--submit {
-      background-color: #7c7c7c;
-      transition: .5s; }
+      background-color: #41ad49;
+      transition: .5s;
+      position: relative; }
+      .map .form-block form .submit-btn--submit::before {
+        content: '';
+        animation-name: compliteSubmit;
+        animation-duration: .3s;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        left: -50px;
+        top: 0;
+        background-image: url(../images/complite.png);
+        display: block;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden; }
+
+@keyframes compliteSubmit {
+  0% {
+    top: -15px;
+    opacity: 0; }
+  100% {
+    top: 0px;
+    opacity: 1; } }
 
 @media (max-width: 1300px) {
   .map {

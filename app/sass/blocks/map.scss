@@ -63,11 +63,41 @@
             }
 
             .submit-btn--submit {
-                background-color: rgb(124, 124, 124);
+                background-color: #41ad49;
                 transition: .5s;
+                position: relative;
+                
+
+                &::before {
+                    content: '';
+                    animation-name: compliteSubmit;
+                    animation-duration: .3s;
+                    position: absolute;
+                    width: 35px;
+                    height: 35px;
+                    left: -50px;
+                    top:0;
+                    background-image: url(../images/complite.png);
+                    display: block;
+                    background-position: 50% 50%;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    overflow: hidden;
+                }
             }
             
         }
+    }
+}
+
+@keyframes compliteSubmit {
+    0% {
+        top:-15px;
+        opacity: 0;
+    }
+    100% {
+        top:0px;
+        opacity: 1;
     }
 }
 
