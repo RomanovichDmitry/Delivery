@@ -110,4 +110,6 @@ formFooter.addEventListener('submit', (evt) => {
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
     request.send('name=' + encodeURIComponent(formData.name) + '&email=' + encodeURIComponent(formData.email) + '&phone=' + encodeURIComponent(formData.phone) + '&message=' + encodeURIComponent(formData.message));
 
+    formFooter.reset();
+
 });
