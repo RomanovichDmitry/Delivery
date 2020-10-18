@@ -113,3 +113,21 @@ formFooter.addEventListener('submit', (evt) => {
     formFooter.reset(); // Сброс формы
 
 });
+
+//Корзина открыть - закрыть
+(function(){
+    let btnOpen = document.querySelector('.cart__btn-icon');
+    let cartHidden = document.querySelector('.cart-hidden');
+    let cartList = document.querySelector('.cart__list');
+    let closeCard = document.querySelector('.cart__close')
+
+    btnOpen.addEventListener('click', () => {
+        cartHidden.classList.add('cart-open');
+        cartList.style.display = "block";
+    })
+    closeCard.addEventListener('click', () => {
+        cartHidden.classList.remove('cart-open');
+        cartList.style.display = "none";
+    })
+
+}());
