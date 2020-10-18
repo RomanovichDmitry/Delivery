@@ -833,7 +833,6 @@ li {
 .cart__list {
   position: absolute;
   display: none;
-  width: 50%;
   padding: 20px 15px;
   right: 50px;
   top: 100px;
@@ -915,11 +914,13 @@ li {
   padding: 10px 0; }
 
 .cart .form input {
-  padding: 5px; }
+  padding: 5px;
+  width: 50%; }
 
 .cart .form textarea {
   resize: none;
-  padding: 5px; }
+  padding: 5px;
+  width: 50%; }
 
 .cart-open {
   position: fixed;
@@ -935,3 +936,32 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; }
+
+@media (max-width: 768px) {
+  .cart__list {
+    width: 100%;
+    right: 0;
+    left: 0;
+    padding: 15px 5px;
+    margin: auto; }
+  .cart .cart__item-img {
+    width: 20vw;
+    margin-right: 10px; }
+  .cart .cart__item-description {
+    margin-right: 15px; }
+  .cart .cart__item-count {
+    margin-right: 10px; }
+  .cart .cart__item-name {
+    font-size: 15px; }
+  .cart .cart__item-number {
+    width: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center; }
+  .cart .cart__item-count {
+    display: flex; }
+  .cart .cart__item-add {
+    padding: 10px 5px; }
+  .cart .cart__btn-icon {
+    bottom: 30px;
+    right: 30px; } }
