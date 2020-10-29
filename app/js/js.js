@@ -46,29 +46,29 @@ let fixHeaderRow = () => {
 };
 window.addEventListener('scroll', fixHeaderRow)
 
-// Переключатель размера пиццы
-items.forEach((item) => {
-    item.addEventListener('click', clickOnCard) //Цикл клика по каждой карточке товара
-});
+// // Переключатель размера пиццы
+// items.forEach((item) => {
+//     item.addEventListener('click', clickOnCard) //Цикл клика по каждой карточке товара
+// });
 
-function clickOnCard(evt) {
-    let target = evt.target; //Отлавливаю элемент по которому был выполнен клик 
-    if (target.classList.contains("catalog__item-btn")) { //Если это элемент с классом
-        let checkboxes = this.querySelectorAll(".catalog__item-btn"); //Нахожу все кнопки
-        for(let checkbox of checkboxes) {
-            checkbox.classList.remove("catalog__item-btn--active") //Удаляю класс активности с каждой кнопки в карточке
-        }
-        // checkboxes.forEach((checkbox) => checkbox.classList.remove("catalog__item-btn--active"));
+// function clickOnCard(evt) {
+//     let target = evt.target; //Отлавливаю элемент по которому был выполнен клик 
+//     if (target.classList.contains("catalog__item-btn")) { //Если это элемент с классом
+//         let checkboxes = this.querySelectorAll(".catalog__item-btn"); //Нахожу все кнопки
+//         for(let checkbox of checkboxes) {
+//             checkbox.classList.remove("catalog__item-btn--active") //Удаляю класс активности с каждой кнопки в карточке
+//         }
+//         // checkboxes.forEach((checkbox) => checkbox.classList.remove("catalog__item-btn--active"));
 
-        target.classList.add("catalog__item-btn--active"); //Добавить класс активности кнопке на карточке на которую был клик
-        let btn = this.querySelector(".catalog__item-submit"); //Нахожу кнопку отправки
-        btn.dataset.size = target.textContent //Создааю в кнопке атрибут и присваиваю ей значение содержимого в кнопке
-        let activBtn = this.querySelector('.catalog__item-btn--active');
-        btn.dataset.price = activBtn.dataset.price
-        let price = this.querySelector(".catalog__item-price");
-            price.textContent = btn.dataset.price + 'руб.'
-    }
-}
+//         target.classList.add("catalog__item-btn--active"); //Добавить класс активности кнопке на карточке на которую был клик
+//         let btn = this.querySelector(".catalog__item-submit"); //Нахожу кнопку отправки
+//         btn.dataset.size = target.textContent //Создааю в кнопке атрибут и присваиваю ей значение содержимого в кнопке
+//         let activBtn = this.querySelector('.catalog__item-btn--active');
+//         btn.dataset.price = activBtn.dataset.price
+//         let price = this.querySelector(".catalog__item-price");
+//             price.textContent = btn.dataset.price + 'руб.'
+//     }
+// }
 
 //Плавный скрол
 const anchors = document.querySelectorAll('a[href*="#"]')
